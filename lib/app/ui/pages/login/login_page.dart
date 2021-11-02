@@ -100,7 +100,9 @@ class LoginPage extends StatelessWidget {
             width: double.infinity,
             height: MediaQuery.of(context).size.height * .065,
             child: CustomOutlinedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, Routes.home);
+              },
               label: 'Login',
             ),
           ),

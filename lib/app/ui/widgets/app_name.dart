@@ -9,11 +9,13 @@ class AppName extends StatelessWidget {
     required this.arc1,
     required this.arc2,
     required this.arc3,
+    this.large = true,
   }) : super(key: key);
 
   final bool arc1;
   final bool arc2;
   final bool arc3;
+  final bool large;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,9 @@ class AppName extends StatelessWidget {
         Text(
           "DoTask",
           style: GoogleFonts.comicNeue(
-            textStyle: Theme.of(context).textTheme.headline4,
+            textStyle: large
+                ? Theme.of(context).textTheme.headline4
+                : Theme.of(context).textTheme.headline6,
             color: AppColors().primary,
             fontWeight: FontWeight.w700,
           ),
